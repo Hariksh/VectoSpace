@@ -13,8 +13,8 @@ from recommender import generate_recommendations
 MODEL_DIR = os.path.join(os.path.dirname(__file__), "src", "ml", "models")
 
 # --- Grade Labels ---
-GRADE_MAP = {0: "Grade F", 1: "Grade E", 2: "Grade D", 3: "Grade C", 4: "Grade B", 5: "Grade A"}
-CATEGORY_MAP = {0: "At-Risk", 1: "At-Risk", 2: "Average", 3: "Average", 4: "High-Performing", 5: "High-Performing"}
+GRADE_MAP = {0: "Grade 0", 1: "Grade 1", 2: "Grade 2", 3: "Grade 3", 4: "Grade 4", 5: "Grade 5"}
+CATEGORY_MAP = {0: "At-Risk", 1: "Below-Average", 2: "Average", 3: "Above-Average", 4: "High-Performing", 5: "Exceptional"}
 
 
 @st.cache_resource

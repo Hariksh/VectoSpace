@@ -47,7 +47,7 @@ if uploaded_file is not None:
     # Read the CSV
     raw_df = pd.read_csv(uploaded_file)
     st.subheader("📄 Uploaded Data")
-    st.dataframe(raw_df, use_container_width=True)
+    st.dataframe(raw_df)
 
     # Load model
     model, feature_names = load_model()
@@ -67,7 +67,7 @@ if uploaded_file is not None:
     results_df["Classification"] = [CATEGORY_MAP.get(p, "Unknown") for p in predictions]
 
     st.subheader("📊 Predictions & Classifications")
-    st.dataframe(results_df, use_container_width=True)
+    st.dataframe(results_df)
 
     # --- Summary counts ---
     col1, col2 = st.columns(2)
